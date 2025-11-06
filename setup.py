@@ -5,14 +5,6 @@ from Cython.Build import cythonize
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import numpy as np
 
-# Fixed version
-VERSION = "0.6.0+29ace8c"
-
-version_file = "alphapose/version.py"
-os.makedirs(os.path.dirname(version_file), exist_ok=True)
-with open(version_file, "w") as f:
-    f.write(f"__version__ = '{VERSION}'\n")
-
 def readme():
     with open("README.md", encoding="utf-8") as f:
         return f.read()
