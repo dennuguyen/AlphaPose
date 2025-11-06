@@ -52,23 +52,23 @@ def get_ext_modules():
     if platform.system() != "Windows" or force_compile:
         ext_modules = [
             make_cython_ext("soft_nms_cpu", "detector.nms", ["src/soft_nms_cpu.pyx"]),
-            make_cuda_ext("nms_cpu", "detector.nms", ["src/nms_cpu.cpp"]),
-            make_cuda_ext("nms_cuda", "detector.nms", ["src/nms_cuda.cpp", "src/nms_kernel.cu"]),
-            make_cuda_ext(
-                "roi_align_cuda",
-                "alphapose.utils.roi_align",
-                ["src/roi_align_cuda.cpp", "src/roi_align_kernel.cu"],
-            ),
-            make_cuda_ext(
-                "deform_conv_cuda",
-                "alphapose.models.layers.dcn",
-                ["src/deform_conv_cuda.cpp", "src/deform_conv_cuda_kernel.cu"],
-            ),
-            make_cuda_ext(
-                "deform_pool_cuda",
-                "alphapose.models.layers.dcn",
-                ["src/deform_pool_cuda.cpp", "src/deform_pool_cuda_kernel.cu"],
-            ),
+            # make_cuda_ext("nms_cpu", "detector.nms", ["src/nms_cpu.cpp"]),
+            # make_cuda_ext("nms_cuda", "detector.nms", ["src/nms_cuda.cpp", "src/nms_kernel.cu"]),
+            # make_cuda_ext(
+            #     "roi_align_cuda",
+            #     "alphapose.utils.roi_align",
+            #     ["src/roi_align_cuda.cpp", "src/roi_align_kernel.cu"],
+            # ),
+            # make_cuda_ext(
+            #     "deform_conv_cuda",
+            #     "alphapose.models.layers.dcn",
+            #     ["src/deform_conv_cuda.cpp", "src/deform_conv_cuda_kernel.cu"],
+            # ),
+            # make_cuda_ext(
+            #     "deform_pool_cuda",
+            #     "alphapose.models.layers.dcn",
+            #     ["src/deform_pool_cuda.cpp", "src/deform_pool_cuda_kernel.cu"],
+            # ),
         ]
     return ext_modules
 
