@@ -94,7 +94,7 @@ def is_installed(package_name):
 if __name__ == "__main__":
     setup(
         name="alphapose",
-        version=VERSION,
+        version="0.6.0",
         description="Code for AlphaPose",
         long_description=readme(),
         long_description_content_type="text/markdown",
