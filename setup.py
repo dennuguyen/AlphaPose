@@ -112,7 +112,7 @@ if __name__ == "__main__":
         python_requires=">=3.8",
         setup_requires=["pytest-runner", "cython", "numpy"],
         tests_require=["pytest"],
-        # install_requires=get_install_requires(),
+        install_requires=get_install_requires(),
         ext_modules=get_ext_modules(),
         cmdclass={"build_ext": BuildExtension},
         zip_safe=False,
