@@ -6,7 +6,7 @@ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import numpy as np
 
 # Fixed version
-VERSION = "0.5.0"
+VERSION = "0.6.0+29ace8c"
 
 version_file = "alphapose/version.py"
 os.makedirs(os.path.dirname(version_file), exist_ok=True)
