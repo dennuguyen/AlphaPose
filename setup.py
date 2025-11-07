@@ -66,6 +66,7 @@ def get_ext_modules():
 
 def get_install_requires():
     install_requires = [
+        "cython-bbox",
         "six",
         "terminaltables",
         "scipy",
